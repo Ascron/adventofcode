@@ -15,7 +15,7 @@ $ make prepare DAY=1.1 [YEAR=2023]
 ### Debugging solution
 _Runs tests and solution itself with debug enabled_
 ```bash
-$ make test DAY=1.1 [YEAR=2023]
+$ make debug DAY=1.1 [YEAR=2023]
 ```
 
 ### Testing solution
