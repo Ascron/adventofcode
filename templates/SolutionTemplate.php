@@ -12,6 +12,7 @@ namespace Ascron\Adventofcode\Solutions\Year{{year}};
 use Ascron\Adventofcode\Solutions\AbstractSolution;
 use Ascron\Adventofcode\Solutions\SolutionInterface;
 use RuntimeException;
+use Ascron\Adventofcode\Utils\Lines;
 
 /**
  * {{puzzleDescription}}
@@ -20,10 +21,9 @@ class {{className}} extends AbstractSolution implements SolutionInterface
 {
     public function solve(string $input): string
     {
-        $input = explode("\n", $input);
         $result = '';
 
-        foreach ($input as $line) {
+        foreach (Lines::fromInput($input) as $line) {
             // Do something with $line
         }
 
