@@ -45,6 +45,10 @@ class AdventApi
             echo "Success!\n";
         } elseif (str_contains($responseBody, 'That\'s not the right answer')) {
             echo "Wrong answer\n";
+        } elseif (str_contains($responseBody, 'You don\'t seem to be solving the right level')) {
+            echo "You\'re sending result of wrong levelt\n";
+        } elseif (str_contains($responseBody, 'You gave an answer too recently')) {
+            echo "Too fast\n";
         } else {
             echo "Unknown response\n";
         }

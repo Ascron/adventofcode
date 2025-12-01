@@ -21,7 +21,7 @@ class {{className}} extends AbstractSolution implements SolutionInterface
 {
     public function solve(string $input): string
     {
-        $result = '';
+        $result = 0;
 
         foreach (Lines::fromInput($input) as $line) {
             // Do something with $line
@@ -30,10 +30,18 @@ class {{className}} extends AbstractSolution implements SolutionInterface
         return (string) $result;
     }
     
-    public function testExample(): void
+    public function test1(): void
     {
-        if ($this->solve('test_input') !== 'test_output') {
-            throw new RuntimeException('Test failed');
+        $input = <<<AOC
+            test_input
+            AOC;
+
+        $output = 'test_output';
+        
+        $testResult = $this->solve($input);
+    
+        if ($testResult !== $output) {
+            throw new RuntimeException('Test failed with result ' . $testResult);
         } 
     }
 }

@@ -8,6 +8,6 @@ class Lines
 {
     public static function fromInput(string $input): array
     {
-        return explode("\n", trim($input));
+        return array_map(trim(...), explode("\n", trim($input)));
     }
 }
